@@ -1,9 +1,9 @@
-# TP TESTING : How to test our new feature change number of seats ?
+# Rattrapages 2025 : Testons notre nouvelle feature de suppression d'un webinaire !
 
-## Table of Contents
+## Table des matières
 
-- [TP TESTING : How to test our new feature change number of seats ?](#tp-testing--how-to-test-our-new-feature-change-number-of-seats-)
-  - [Table of Contents](#table-of-contents)
+- [Rattrapages 2025 : Testons notre nouvelle feature de suppression d'un webinaire !](#testons-notre-nouvelle-feature-de-suppresion-d-un-webinaire-)
+  - [Table des matières](#table-des-matieres)
   - [Présentation du contexte](#présentation-du-contexte)
   - [Notation](#notation)
   - [Aide à la réalisation de ce TP](#aide-à-la-réalisation-de-ce-tp)

@@ -33,7 +33,7 @@ export class TestServerFixture {
       },
     });
 
-    await asyncExec(`DATABASE_URL=${dbUrl} npx prisma migrate deploy`);
+    await asyncExec(`DATABASE_URL=${dbUrl} npx prisma db push --skip-generate`);
     await this.prismaClient.$connect();
 
     // Initialiser le conteneur avec Prisma
@@ -62,6 +62,6 @@ export class TestServerFixture {
 
   async reset() {
     await this.prismaClient.webinar.deleteMany();
-    await this.prismaClient.$executeRawUnsafe('DELETE FROM "Webinar" CASCADE');
+    await this.prismaClient.user.deleteMany();
   }
 }

@@ -21,4 +21,13 @@ model Webinar {
   endDate     DateTime
   seats       Int
   organizerId String
+  organizer   User     @relation(fields: [organizerId], references: [id])
+}
+
+model User {
+  id       String   @id @default(uuid())
+  email    String   @unique
+  password String
+
+  webinars Webinar[]
 }

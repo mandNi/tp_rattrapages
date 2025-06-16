@@ -7,6 +7,7 @@ export class InMemoryWebinarRepository implements IWebinarRepository {
     const webinar = this.database.find((webinar) => webinar.props.id === id);
     return webinar ? new Webinar({ ...webinar.initialState }) : null;
   }
+
   async findById(id: string): Promise<Webinar | null> {
     const webinar = this.database.find((webinar) => webinar.props.id === id);
     return webinar ? new Webinar({ ...webinar.initialState }) : null;
@@ -19,7 +20,12 @@ export class InMemoryWebinarRepository implements IWebinarRepository {
     this.database[index] = webinar;
     webinar.commit();
   }
+
   async create(webinar: Webinar): Promise<void> {
     this.database.push(webinar);
+  }
+
+  async delete(id: string): Promise<void> {
+    this.database = this.database.filter(w => w.props.id !== id);
   }
 }
